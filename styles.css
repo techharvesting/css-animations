@@ -1,0 +1,57 @@
+body {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.square {
+   height: 200px;
+   width: 200px;
+   border-radius: 20px;
+   background-color: aqua;
+   margin: 10px;
+   text-align: center;
+}
+
+.square-hover {
+   background-color: rgb(172, 234, 236);
+   transition: ease .4s;
+   transition-property: background-color, color;
+}
+.square-hover:hover {
+   background-color: rgb(6, 33, 34);
+   color: white;
+}
+
+@keyframes colorBlink {
+   from {
+      background-color: red;
+   }
+   to {
+      background-color: black;
+   }
+}
+
+.square-blink {
+   animation-name: colorBlink;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   50% {
+      transform: rotate(120deg);
+   }
+   100% {
+      transform: rotate(260deg);
+   }
+}
+
+.square-spin {
+   animation-name: spin;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+}
